@@ -1,6 +1,6 @@
-# testapp
+# WorldClock
 
-A new Flutter project.
+A project to determine time in every timezone.
 
 ## Getting Started
 
