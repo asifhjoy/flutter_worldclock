@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:testapp/services/worldtime.dart';
+import 'package:worldclock/services/worldtime.dart';
 import 'package:dio/dio.dart';
 
 class ChooseLocation extends StatefulWidget {
