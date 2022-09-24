@@ -1,6 +1,7 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, unnecessary_string_interpolations
 
 import 'package:flutter/material.dart';
+import 'package:geolocator/geolocator.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -20,11 +21,15 @@ class _HomeState extends State<Home> {
   Map data = {};
 
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     data = data.isNotEmpty
         ? data
         : ModalRoute.of(context)?.settings.arguments as Map;
-    print(data);
     String bgimgurl = data['isDay']
         ? 'https://images.unsplash.com/photo-1611582032151-ece9bdaf932d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80'
         : 'https://images.unsplash.com/photo-1515311320503-6e3d309537b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80';
@@ -96,7 +101,7 @@ class _HomeState extends State<Home> {
                   fontSize: 20,
                   color: Colors.white,
                 ),
-              )
+              ),
             ]),
           ),
         ),

@@ -17,7 +17,6 @@ class WorldTime {
       Response response = await get(Uri.parse(
           'https://timeapi.io/api/Time/current/zone?timeZone=$timezone'));
       Map data = jsonDecode(response.body);
-      print(data);
       DateTime now = DateTime.parse(data['dateTime']);
       isDay = (now.hour > 6 && now.hour < 19) ? true : false;
       date = DateFormat.yMMMMEEEEd().format(now);
