@@ -68,23 +68,27 @@ class _ChooseLocationState extends State<ChooseLocation> {
         centerTitle: true,
         elevation: 0,
       ),
-      body: ListView.builder(
-        itemCount: timezones.length,
-        itemBuilder: ((context, index) {
-          return Padding(
-            padding: const EdgeInsets.fromLTRB(4, 4, 4, 0),
-            child: Card(
-              child: ListTile(
-                onTap: () {
-                  updateTime(timezones[index]);
-                },
-                title: Text(
-                  timezones[index],
+      body: Scrollbar(
+        thumbVisibility: true,
+        thickness: 10,
+        child: ListView.builder(
+          itemCount: timezones.length,
+          itemBuilder: ((context, index) {
+            return Padding(
+              padding: const EdgeInsets.fromLTRB(4, 4, 4, 0),
+              child: Card(
+                child: ListTile(
+                  onTap: () {
+                    updateTime(timezones[index]);
+                  },
+                  title: Text(
+                    timezones[index],
+                  ),
                 ),
               ),
-            ),
-          );
-        }),
+            );
+          }),
+        ),
       ),
     );
   }

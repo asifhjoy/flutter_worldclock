@@ -56,9 +56,6 @@ class _HomeState extends State<Home> {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(
-                    width: 20,
-                  ),
                   TextButton.icon(
                     onPressed: () async {
                       dynamic result =
